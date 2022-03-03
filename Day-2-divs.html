@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript day-2</title>
+</head>
+<style>
+div{
+    height: fit-content;
+    width: fit-content;
+    margin: 3px;
+    padding: 4px;
+    text-align: center;
+    border: 3px solid;
+}
+</style>
+<body>
+<div id="div1">Div 1</div>
+<div id="div2">Div 2</div>
+<div id="div3">Div 3</div>
+<button id="colors">Click me</button>
+<script>
+    const divs = document.querySelectorAll("div")
+    divs.forEach(div => div.style.backgroundColor ="#ffd4d4")
+
+    const setBGC = () => {
+        const randomColor = Math.floor(Math.random()*16777215).toString(16)
+        divs.forEach(div => div.style.backgroundColor = "#"+randomColor)
+        divs.forEach(div => div.innerHTML = "The color is: #"+randomColor)
+    }
+    colors.addEventListener("click",setBGC);
+
+
+
+</script>
+
+</body>
+
+</html>
