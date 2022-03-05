@@ -23,14 +23,21 @@ div{
     const divs = document.querySelectorAll("div")
     divs.forEach(div => div.style.backgroundColor ="#ffd4d4")
 
-    const setBGC = () => {
-        const randomColor = Math.floor(Math.random()*16777215).toString(16)
-        divs.forEach(div => div.style.backgroundColor = "#"+randomColor)
+  /*
+  const setBGC = () => {
+        const randomColor =  Math.floor(Math.random()*16777215).toString(16)
+        divs.forEach(div => div.style.backgroundColor = "#"+setBGC)
         divs.forEach(div => div.innerHTML = "The color is: #"+randomColor)
     }
-    colors.addEventListener("click",setBGC);
-
-
+   */
+    function divColor(){
+        for(var i = 0; i<divs.length; i++) {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16)
+            divs[i].style.backgroundColor = "#" + randomColor;
+            divs[i].innerHTML = "The color is: #" + randomColor;
+        }
+    }
+    colors.addEventListener("click",divColor);
 
 </script>
 
